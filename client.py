@@ -1,7 +1,7 @@
 import driver
 
-sinthomes = driver.check_sinthomes("common_cold")
-print(sinthomes)
+symptoms = driver.check_symptoms("common_cold")
+print(symptoms)
 
 
 causes = driver.check_causes("common_cold")

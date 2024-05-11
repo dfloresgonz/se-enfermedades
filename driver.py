@@ -13,16 +13,16 @@ engine.reset()
 engine.activate("fc_sickness")
 
 
-def check_sinthomes(sickness):
-    sinthomes = []
+def check_symptoms(sickness):
+    symptoms = []
     with engine.prove_goal(
         'sickness.sickness_sinthome($sickness, $sinthome)',
         sickness=sickness) \
             as gen:
         for vars, plan in gen:
-            sinthomes.append(vars['sinthome'])
+            symptoms.append(vars['sinthome'])
             # print("%s is a sinthome of %s" % (vars['sinthome'], SICKNESS))
-    return sinthomes
+    return symptoms
 
 
 def check_causes(sickness):
