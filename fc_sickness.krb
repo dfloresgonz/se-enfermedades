@@ -1,0 +1,11 @@
+exact_sinthome
+    foreach
+        sickness.sinthome_of($sinthome, $sickness)
+    assert
+        sickness.sickness_sinthome($sickness, $sinthome)
+
+causes
+    foreach
+        sickness.cause_of($cause, $sickness)
+    assert
+        sickness.sickness_cause($sickness, $cause)
